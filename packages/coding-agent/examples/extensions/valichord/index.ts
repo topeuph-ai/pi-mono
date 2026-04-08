@@ -123,7 +123,7 @@ export default function valichordExtension(pi: ExtensionAPI): void {
 			),
 		}),
 
-		async execute(toolCallId, params, signal, onUpdate, ctx) {
+		async execute(_toolCallId, params, signal, onUpdate, ctx) {
 			// Resolve deposit path
 			const depositPath = path.isAbsolute(params.deposit_path)
 				? params.deposit_path
@@ -380,7 +380,6 @@ export default function valichordExtension(pi: ExtensionAPI): void {
 				`[Context: ValiChord API is at ${apiEndpoint}. ` +
 				`API key: ${hasKey ? "configured (VALICHORD_API_KEY set)" : "not set (open mode)"}. ` +
 				`The valichord_validate tool is available for programmatic submission.]`,
-				{ deliverAs: "nextTurn" },
 			);
 
 			ctx.ui.notify("ValiChord workflow loaded. Tell pi your role (researcher or validator) and provide the deposit.", "info");

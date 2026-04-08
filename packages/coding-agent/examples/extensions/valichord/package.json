@@ -1,0 +1,17 @@
+{
+  "name": "pi-extension-valichord",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ValiChord reproducibility verification extension for pi",
+  "type": "module",
+  "scripts": {
+    "clean": "echo 'nothing to clean'",
+    "build": "echo 'nothing to build'",
+    "check": "echo 'nothing to check'"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
